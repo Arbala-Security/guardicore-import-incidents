@@ -2,6 +2,8 @@
 
 Author: Arbala Security
 
+For any technical questions, please contact info@arbalasystems.com.
+
 This playbook will give Azure Sentinel the ability to query your Guardicore Centra Cloud instance API to retrieve established incidents. The API query will be sent every 10 minutes. Incidents that have had their data copied to Sentinel logs will be marked with the “Sentinel” tag in Guardicore. 
 
 
