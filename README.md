@@ -100,3 +100,5 @@ Click on “Advanced Settings”.
 Next, click on “Connected Sources” and then “Windows Servers” to display your Workspace ID and either Primary or Secondary key. 
 
 ![settings3](Images/settings3.png)
+
+For any technical questions, please contact info@arbalasystems.com.
