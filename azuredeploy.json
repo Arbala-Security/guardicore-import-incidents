@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "metadata": {
-        "comments": "This playbook will pull Guardicore Incidents into Azure Sentinel Logs and update the Guardicore Incidents with a tag, showing that they are in Sentinel.",
+        "comments": "This playbook will pull Guardicore Incidents into Microsoft Sentinel Logs and update the Guardicore Incidents with a tag, showing that they are in Sentinel.",
         "author": "Accelerynt"
     },
     "parameters": {
