@@ -15,13 +15,13 @@ This playbook will give Microsoft Sentinel the ability to query your Guardicore 
 
 You will need the following items to enter in the playbook settings during deployment: 
 
-* URL for your Guardicore instance. 
+* URL for your Guardicore instance
 
-* A Username/Password that is a Local Administrator in your Guardicore environment. 
+* A Username/Password that is a Local Administrator in your Guardicore environment
 
-* The Microsoft Sentinel Workspace ID where you want the incidents logged. 
+* The Microsoft Sentinel Workspace ID where you want the incidents logged
 
-* The Primary or Secondary Key to your workspace. 
+* The Primary or Secondary Key to your workspace
 
 # 
 ### Setup
@@ -100,13 +100,13 @@ You should see the that the “**Send Data**” box has updated and displays “
 
 ![Logicapp6](Images/Logicapp6.png)
 
-Depending on how many and how frequently you have incidents created in Guardicore, it could take a few minutes or several hours for the logs to show up Sentinel. You can view the incident logs by returning to your Azure Sentinel workspace and clicking on “**Logs**”. You should have a new custom log called “**GCIncidents_CL**” – type that into your query window and click run. Adjust the time range, as necessary. Each line returned contains the details for each individual incident returned from the Guardicore API. 
+Depending on how many and how frequently you have incidents created in Guardicore, it could take a few minutes or several hours for the logs to show up Sentinel. You can view the incident logs by returning to your Microsoft Sentinel workspace and clicking on “**Logs**”. You should have a new custom log called “**GCIncidents_CL**” – type that into your query window and click run. Adjust the time range, as necessary. Each line returned contains the details for each individual incident returned from the Guardicore API. 
 
 ![final](Images/final.png)
 
-## Finding your Azure Sentinel Workspace ID and Primary/Secondary Key 
+## Finding your Microsoft Sentinel Workspace ID and Primary/Secondary Key 
 
-To find your Workspace ID and Primary/Secondary key, start by clicking on “**Settings**” from the Azure Sentinel workspace you want the incidents sent to. Then click on “**Workspace Settings**” under the Azure Search Bar. 
+To find your Workspace ID and Primary/Secondary key, start by clicking on “**Settings**” from the Microsoft Sentinel workspace you want the incidents sent to. Then click on “**Workspace Settings**” under the Microsoft Search Bar. 
 
 ![settings1](Images/settings1.png)
 
