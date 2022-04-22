@@ -26,7 +26,7 @@ You will need the following items to enter in the playbook settings during deplo
 # 
 ### Setup
 
-To retrieve the Guardicore instance URL needed for the deployment of this playbook, log into your account. Take note of the url, which will look like **https://cus-0000.cloud.guardicore.com** , where 0000 is your 4 digit customer number.
+To retrieve the Guardicore instance URL needed for the deployment of this playbook, log into your account. Take note of the url, which will look like **https://cus-0000.cloud.guardicore.com**, where 0000 is your 4 digit customer number.
 
 ![GCURL](Images/GCURL.png)
 
