@@ -52,7 +52,7 @@ In the **Instance Details** section:
 
 * **Playbook Name**: This can be left as “Guardicore-Import-Incidents” or you may change it.  
 
-* **GCURL**: Enter your Guardicore tenant URL here. It must look like thr following: **https://cus-0000.cloud.guardicore.com** 
+* **GCURL**: Enter your Guardicore tenant URL here. It must look like the following: **https://cus-0000.cloud.guardicore.com** 
 
 Please ensure there is no **/** after the .com. 
 
