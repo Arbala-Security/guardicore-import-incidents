@@ -96,27 +96,25 @@ In the **Connection Name** put GCIncidents. The next fields are **Workspace Key*
 
 ![Logicapp5](Images/Logicapp5.png)
 
-You should see the that the “Send Data” box has updated and displays “Connected to GCIncidents.” Click the X to close the Logic App Designer. There is no need to click a save button.  
+You should see the that the “**Send Data**” box has updated and displays “**Connected to GCIncidents**”. Click the X to close the Logic App Designer. There is no need to click a save button.  
 
 ![Logicapp6](Images/Logicapp6.png)
 
-Depending on how many and how frequently you have incidents created in Guardicore, it could take a few minutes or several hours for the logs to show up Sentinel. You can view the incident logs by returning to your Azure Sentinel workspace and clicking on “Logs.” You should have a new custom log called “GCIncidents_CL” – type that into your query window and click run. Adjust the time range, as necessary. Each line returned contains the details for each individual incident returned from the Guardicore API. 
+Depending on how many and how frequently you have incidents created in Guardicore, it could take a few minutes or several hours for the logs to show up Sentinel. You can view the incident logs by returning to your Azure Sentinel workspace and clicking on “**Logs**”. You should have a new custom log called “**GCIncidents_CL**” – type that into your query window and click run. Adjust the time range, as necessary. Each line returned contains the details for each individual incident returned from the Guardicore API. 
 
 ![final](Images/final.png)
 
 ## Finding your Azure Sentinel Workspace ID and Primary/Secondary Key 
 
-To find your Workspace ID and Primary/Secondary key, start by clicking on “Settings” from the Azure Sentinel workspace you want the incidents sent to. Then click on “Workspace Settings” under the Azure Search Bar. 
+To find your Workspace ID and Primary/Secondary key, start by clicking on “**Settings**” from the Azure Sentinel workspace you want the incidents sent to. Then click on “**Workspace Settings**” under the Azure Search Bar. 
 
 ![settings1](Images/settings1.png)
 
-Click on “Advanced Settings”. 
+Click on “**Advanced Settings**”. 
 
 ![settings2](Images/settings2.png)
 
 
-Next, click on “Connected Sources” and then “Windows Servers” to display your Workspace ID and either Primary or Secondary key. 
+Next, click on “**Connected Sources**” and then “**Windows Servers**” to display your Workspace ID and either Primary or Secondary key. 
 
 ![settings3](Images/settings3.png)
-
-For any technical questions, please contact info@arbalasystems.com.
