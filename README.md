@@ -1,18 +1,17 @@
 # Integrating Guardicore Incidents into Azure Sentinel 
 
-Author: Arbala Security
+Author: Accelerynt
 
-For any technical questions, please contact info@arbalasystems.com.
+For any technical questions, please contact info@accelerynt.com
 
-This playbook will give Azure Sentinel the ability to query your Guardicore Centra Cloud instance API to retrieve established incidents. The API query will be sent every 10 minutes. Incidents that have had their data copied to Sentinel logs will be marked with the “Sentinel” tag in Guardicore. 
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAccelerynt-Security%2FGuardicore-Import-Incidents%2Fmaster%2Fazuredeploy.json)
+[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAccelerynt-Security%2FGuardicore-Import-Incidents%2Fmaster%2Fazuredeploy.json)      
 
+This playbook will give Microsoft Sentinel the ability to query your Guardicore Centra Cloud instance API to retrieve established incidents. The API query will be sent every 10 minutes. Incidents that have had their data copied to Microsoft Sentinel logs will be marked with the “Sentinel” tag in Guardicore. 
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FArbala-Security%2FGuardicore-Import-Incidents%2Fmaster%2Fazuredeploy.json" target="_blank">
-    <img src="https://aka.ms/deploytoazurebutton""/>
-</a>
-                                                  
-                                                 
+                                    
 #
+### Requirements
 
 You will need the following items to enter in the playbook settings during deployment: 
 
@@ -24,55 +23,72 @@ You will need the following items to enter in the playbook settings during deplo
 
 * The Primary or Secondary Key to your workspace. 
 
+# 
+### Setup
+
+To retrieve the Guardicore instance URL needed for the deployment of this playbook, log into your account. Take note of the url, which will look like **https://cus-0000.cloud.guardicore.com** , where 0000 is your 4 digit customer number.
+
+![GCURL](Images/GCURL.png)
+
+#
+### Deployment                                                                                                         
+                                                                                                        
+To configure and deploy this playbook:
+
 Open your browser and ensure you are logged into your Azure Sentinel workspace. In separate tab, open the link to our playbook on the Arbala Security GitHub Repository:
 
-https://github.com/Arbala-Security/Guardicore-Import-Incidents
+https://github.com/Accelerynt-Security/Guardicore-Import-Incidents
 
-From there, click the “Deploy to Azure” button at the bottom and it will bring you to the Custom Deployment Template.
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAccelerynt-Security%2FGuardicore-Import-Incidents%2Fmaster%2Fazuredeploy.json)
+[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAccelerynt-Security%2FGuardicore-Import-Incidents%2Fmaster%2Fazuredeploy.json)      
 
-![Deploy](Images/GitDeploy.png)
+Click the “**Deploy to Azure**” button at the bottom and it will bring you to the custom deployment template.
 
-In the **BASICS** section:  
+In the **Project Details** section:
 
 * Select the “**Subscription**” and “**Resource Group**” from the dropdown boxes you would like the playbook deployed to.  
 
-In the **SETTINGS** section:   
+In the **Instance Details** section:  
 
 * **Playbook Name**: This can be left as “Guardicore-Import-Incidents” or you may change it.  
 
-* **GCURL**: Enter your Guardicore tenant URL here. You can replace <guardicore_instance_url> with cus-0000.cloud.guardicore, where 0000 is your 4 digit customer number or copy and paste the URL from your Guardicore instance. It must look exactly like - https://cus-0000.cloud.guardicore.com  Also, ensure there is no / after the .com. 
+* **GCURL**: Enter your Guardicore tenant URL here. It must look like thr following: **https://cus-0000.cloud.guardicore.com** 
 
-![GCURL](Images/GCURL.png)
+Please ensure there is no **/** after the .com. 
+
 
 * **GC Username**: Replace text with username of the Guardicore Admin account you want to use. 
 
 * **GC Password**: Replace text with password of the Guardicore Admin account you want to use. 
 
-Towards the bottom ensure you check the box accepting the terms and conditions and then click on “Purchase”. 
+Towards the bottom, click on “**Review + create**”. 
 
 ![template](Images/template.png)
 
-The playbook should take less than a minute to deploy. Return to your Azure Sentinel workspace and click on “Playbooks.” Next, click on your newly deployed playbook. Don’t be alarmed to see that the status of the playbook shows failed. We still need to edit the playbook to enter the Azure Sentinel Workspace ID and Key.  
+Once the resources have validated, click on "**Create**".
+
+The resources should take around a minute to deploy. Once the deployment is complete, you can expand the "**Deployment details**" section to view them.
+Click the one corresponding to the Logic App.
 
 ![playbookclick](Images/playbookclick.png)
 
-Click on the “Edit” button. This will bring us into the Logic Apps Designer.
+Click on the “**Edit**” button. This will bring us into the Logic Apps Designer.
 
 ![editbutton](Images/editbutton.png)
 
-Click on the bottom bar labeled “For each Guardicore incident”. 
+Click on the bottom bar labeled “**For each Guardicore incident**”. 
 
 ![Logicapp1](Images/Logicapp1.png)
 
-Click on the bar labeled “If no Sentinel tag was found”. 
+Click on the bar labeled “**If no Sentinel tag was found**”. 
 
 ![Logicapp2](Images/Logicapp2.png)
 
-Click on “Connections”.  
+Click on “**Connections**”. This uses a connection created during the deployment of this playbook. Before the playbook can be run, this connection will either need to be authorized in this step, or an existing authorized connection may be alternatively selected.
 
 ![Logicapp3](Images/Logicapp3.png)
 
-Click on the circled exclamation point under the word "Invalid". 
+To validate the connection created for this playbook, expand the "**Connections**" step and click the exclamation point icon next to the name matching the playbook.
 
 ![Logicapp4](Images/Logicapp4.png)
 
