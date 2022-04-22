@@ -1,4 +1,4 @@
-# Integrating Guardicore Incidents into Azure Sentinel 
+# Integrating Guardicore Incidents into Microsoft Sentinel 
 
 Author: Accelerynt
 
@@ -19,7 +19,7 @@ You will need the following items to enter in the playbook settings during deplo
 
 * A Username/Password that is a Local Administrator in your Guardicore environment. 
 
-* The Azure Sentinel Workspace ID where you want the incidents logged. 
+* The Microsoft Sentinel Workspace ID where you want the incidents logged. 
 
 * The Primary or Secondary Key to your workspace. 
 
@@ -35,7 +35,7 @@ To retrieve the Guardicore instance URL needed for the deployment of this playbo
                                                                                                         
 To configure and deploy this playbook:
 
-Open your browser and ensure you are logged into your Azure Sentinel workspace. In separate tab, open the link to our playbook on the Arbala Security GitHub Repository:
+Open your browser and ensure you are logged into your Microsoft Sentinel workspace. In separate tab, open the link to our playbook on the Accelerynt Security GitHub Repository:
 
 https://github.com/Accelerynt-Security/Guardicore-Import-Incidents
 
